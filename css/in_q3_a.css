@@ -1,0 +1,311 @@
+@import url("https://fonts.cdnfonts.com/css/navitism");
+@import url("https://fonts.cdnfonts.com/css/eisenhower");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e3cb10;
+  font-family: "Navitism", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.circle-container h1,
+.circle-container h2 {
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  pointer-events: none;
+  user-select: none;
+  font-family: "Eisenhower", sans-serif;
+  font-weight: 100;
+}
+
+.highlight {
+  color: #3b3636;
+  font-size: 3.5rem;
+  font-family: "Eisenhower", sans-serif;
+}
+
+.circle-container {
+  width: 50vw;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  margin: 3rem auto 5rem;
+  background: transparent;
+}
+
+.circle-container h1 {
+  top: 37%;
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+.circle-container h2 {
+  top: 55%;
+  font-family: "Navitism", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: rgb(60, 60, 60);
+}
+
+.cup-button {
+  position: absolute;
+  width: 45%;
+  aspect-ratio: 1 / 1;
+  border: none;
+  background: none;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.cup-button:hover {
+  transform: translate(-50%, -50%) scale(1.3);
+  z-index: 10;
+}
+
+.cup-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  user-select: none;
+  pointer-events: none;
+}
+
+.cup-button[data-flavor="spicy"]:hover img {
+  content: url("../images/Spicy2.png");
+}
+
+.cup-button[data-flavor="herby"]:hover img {
+  content: url("../images/Herby2.png");
+}
+
+.cup-button[data-flavor="nutty"]:hover img {
+  content: url("../images/Nutty2.png");
+}
+
+.cup-button[data-flavor="smoky"]:hover img {
+  content: url("../images/Smoky2.png");
+}
+
+.cup-button[data-flavor="fruity"]:hover img {
+  content: url("../images/Fruity2.png");
+}
+
+.cup-button[data-flavor="flowery"]:hover img {
+  content: url("../images/Flowery2.png");
+}
+
+.cup-button[data-flavor="spicy"] {
+  top: 15%;
+  left: 50%;
+}
+
+.cup-button[data-flavor="flowery"] {
+  top: 30%;
+  left: 95%;
+}
+
+.cup-button[data-flavor="herby"] {
+  top: 70%;
+  left: 95%;
+}
+
+.cup-button[data-flavor="smoky"] {
+  top: 85%;
+  left: 50%;
+}
+
+.cup-button[data-flavor="fruity"] {
+  top: 70%;
+  left: 5%;
+}
+
+.cup-button[data-flavor="nutty"] {
+  top: 30%;
+  left: 5%;
+}
+
+
+.button {
+  transform: scale(0.05);
+  width: 1vw;
+  height: 1vh;
+  position: absolute;
+  bottom: 15%;
+  right: 8%;
+}
+
+.button :hover {
+  filter: drop-shadow(80px 10px 10px #e64610);
+  transition: filter 0.3s ease;
+}
+
+@media only screen and (max-width: 767px) {
+  .circle-container h1,
+  .circle-container h2 {
+    position: static;
+    width: 100%;
+    left: auto;
+    transform: none;
+    text-align: center;
+  }
+
+  .circle-container h2 {
+    top: 2%;
+  }
+
+  .highlight {
+    font-size: 3.3rem;
+  }
+
+  .circle-container {
+    top: 5%;
+    width: 90vw;
+    height: auto;
+    position: relative;
+    margin: 2rem auto;
+   
+  }
+
+  .cup-button {
+    position: static;
+    width: 90%;
+    aspect-ratio: auto;
+    margin: 0.5rem auto;
+    transform: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cup-button:hover {
+    transform: scale(1.1);
+    z-index: auto;
+  }
+
+  .cup-button[data-flavor="spicy"],
+  .cup-button[data-flavor="flowery"],
+  .cup-button[data-flavor="herby"],
+  .cup-button[data-flavor="smoky"],
+  .cup-button[data-flavor="fruity"],
+  .cup-button[data-flavor="nutty"] {
+    top: auto !important;
+    left: auto !important;
+  }
+
+  .button {
+    align-self: center; /* center horizontally */
+    margin-bottom: 10rem; /* space above footer */
+    margin-right: 5.8rem;
+    transform: scale(0.06); /* remove scaling or adjust as needed */
+    position: static; /* reset absolute positioning */
+  }
+  
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .circle-container {
+    top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    aspect-ratio: auto;
+    height: auto;
+    margin: 2rem auto 5rem;
+   
+  }
+
+  .circle-container h1,
+  .circle-container h2 {
+    position: static;
+    width: 100%;
+    margin-left: 53%;
+    margin-bottom: 1%;
+  }
+
+  .circle-container h1 {
+    font-size: 5rem;
+  }
+
+  .highlight {
+    font-size: 4rem;
+  }
+
+  .cup-button {
+    position: static;
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    margin: 1% 5%;
+    transform: none;
+    transition: transform 0.3s ease;
+  }
+
+  .cup-button:hover {
+    transform: scale(1.1);
+    z-index: 10;
+  }
+  .button {
+    align-self: center; /* center horizontally */
+    margin-bottom: 10rem; /* space above footer */
+    margin-right: 8em;
+    transform: scale(0.07); /* remove scaling or adjust as needed */
+    position: static; /* reset absolute positioning */
+  }
+}
+
+@media only screen and (min-device-width: 577px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .button {
+    transform: scale(0.07);
+    bottom: -62rem;
+    left: 44%;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .highlight {
+    font-size: 10rem;
+  }
+
+  .circle-container h1 {
+    font-size: 8rem;
+  }
+
+  .circle-container h2 {
+    top: 60%;
+    font-size: 3.5rem;
+  }
+
+  .button {
+    transform: scale(0.08);
+    bottom: 15%;
+    right: 5.8%;
+  }
+}

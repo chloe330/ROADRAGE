@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROADRAGE</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dc.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <img src="images/Logo.png" alt="Icon" class="header-icon" />
+        <nav>
+          <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar2"></div>
+          </div>
+          <div class="nav-wrapper" id="navWrapper">
+            <ul class="nav-menu" id="myLinks">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="in_start-1.html">COFFEE101</a></li>
+              <li><a href="localshop.html">HKROAST</a></li>
+              <li><a href="discussion.html">BREWROOM</a></li>
+              <li><a href="aboutus.html">ABOUTUS</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div id="overlay" class="overlay"></div>
+      <canvas id="canvas"></canvas>
+      <button id="toggleDrawingButton"></button>
+      <button id="clearCanvasButton" style="display: none"></button>
+
+      <span class="title"
+        >EXPRESS YOUR <span class="love">LOVE</span> FOR COFFEE WITH
+        OTHERS</span
+      >
+
+      <form id="commentForm">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Name" required />
+          <textarea
+            id="content"
+            placeholder="Spill Your Thoughts"
+            required
+          ></textarea>
+          <button type="submit">Post</button>
+        </div>
+      </form>
+
+      <section id="testimonials">
+        <div class="testimonial-box-container" id="commentsContainer"></div>
+      </section>
+
+      <footer class="footer">
+        <p>&copy; 2024 Coffee Website. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="./js/text.js"></script>
+    <script src="./js/drawing.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/discussion.js"></script>
+  </body>
+</html>

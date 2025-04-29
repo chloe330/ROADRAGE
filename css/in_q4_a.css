@@ -1,0 +1,547 @@
+@import url("https://fonts.cdnfonts.com/css/navitism");
+@import url("https://fonts.cdnfonts.com/css/eisenhower");
+
+body {
+  background-color: #9fc215;
+}
+
+.map2 {
+  display: block;
+  width: 90%;
+  height: 70%;
+  background: url("../images/map2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 17%;
+  left: 8%;
+  overflow: hidden;
+  z-index: 0; 
+}
+
+.header-icon {
+  position: absolute;
+  top: 2%;
+  left: 1.35%;
+  width: 6%;
+  height: auto;
+  z-index: 2;
+}
+
+.v313_182 {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  left: 35%;
+  top: 13%;
+  font-size: 2.6rem;
+  opacity: 1;
+  text-align: center;
+  font-family: "Eisenhower", sans-serif;
+  font-weight: 100;
+  animation: fadeIn 2s;
+  z-index: 1;
+}
+
+.v313_190 {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 20%;
+  left: 34.2%;
+  font-size: 1.2rem;
+  opacity: 1;
+  text-align: center;
+  font-weight: 100;
+  z-index: 1;
+}
+
+
+.America,
+.Africa,
+.Asia {
+  font-family: "Eisenhower", sans-serif;
+  width: 20%;
+  position: absolute;
+  top: 29%;
+  font-size: 2.5rem;
+  opacity: 1;
+  text-align: center;
+  z-index: 1;
+  color: rgb(0, 0, 0);
+}
+
+.America {
+  left: 15%;
+}
+
+.Africa {
+  left: 40%;
+}
+
+.Asia {
+  left: 65%;
+}
+
+.v313_186,
+.v313_187,
+.v313_188 {
+  width: 20%;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 35%;
+  font-size: 1.3rem;
+  opacity: 1;
+  text-align: center;
+  font-family: "Navitism", sans-serif;
+  font-weight: 400;
+  z-index: 1;
+}
+
+.v313_187 {
+  left: 15%;
+}
+
+.v313_186 {
+  left: 40%;
+}
+
+.v313_188 {
+  left: 65%;
+}
+
+
+.under-button {
+  position: absolute;
+  bottom: 27%;
+  right: 8%;
+  transform: scale(0.05);
+  width: 1vw;
+  height: 1vh;
+  z-index: 1;
+  animation: fadeIn 7s;
+}
+
+.under-button:hover {
+  filter: drop-shadow(80px 10px 10px #e3cb10);
+  transition: filter 0.3s ease;
+}
+
+.coffee-belt-info {
+  position: absolute;
+  bottom: 36%;
+  left: 3%;
+  width: 20%;
+  text-align: center;
+  font-family: "Navitism", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  animation: fadeIn 5s;
+  color: rgb(0, 0, 0);
+  z-index: 2;
+}
+
+.fadeIn {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.top-frame {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  opacity: 40%;
+  animation: moveTopToMiddle 2s forwards;
+  z-index: 1;
+}
+
+.bottom-frame {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  opacity: 40%;
+  animation: moveBottomToMiddle 2s forwards;
+  z-index: 1;
+}
+
+@keyframes moveTopToMiddle {
+  from {
+    height: 0;
+  }
+  to {
+    height: calc(52%);
+  }
+}
+
+@keyframes moveBottomToMiddle {
+  from {
+    height: 0;
+  }
+  to {
+    height: calc(34.6%);
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .map2 {
+    width: 90%;
+    height: 50%;
+    top: 20%;
+    left: 7%;
+  }
+  .v313_182 {
+    left: 3%;
+    font-size: 3rem;
+    top: 8%;
+    margin: 0;
+  }
+
+  .America,
+  .Africa,
+  .Asia {
+    width: 20%;
+    top: 30%;
+    font-size: 1.4rem;
+  }
+
+  .America {
+    left: 12%;
+  }
+
+  .Africa {
+    left: 44%;
+  }
+
+  .Asia {
+    left: 70%;
+  }
+
+  .v313_186,
+  .v313_187,
+  .v313_188 {
+    top: 34%;
+    font-size: 0.8rem;
+  }
+
+  .v313_187 {
+    left: 12%;
+  }
+
+  .v313_186 {
+    left: 44%;
+  }
+
+  .v313_188 {
+    left: 70%;
+  }
+
+  .v313_190 {
+    top: 22%;
+    left: 17%;
+    width: 70%;
+    font-size: 1rem;
+  }
+
+  .under-button {
+    bottom: 25%;
+    right: 37%;
+    transform: scale(0.06);
+  }
+
+  .coffee-belt-info {
+    bottom: 30%;
+    left: 17%;
+    width: 70%;
+    font-size: 0.8rem;
+    z-index: 1;
+  }
+
+  @keyframes moveTopToMiddle {
+    from {
+      height: 0;
+    }
+    to {
+      height: calc(45%);
+    }
+  }
+
+  @keyframes moveBottomToMiddle {
+    from {
+      height: 0;
+    }
+    to {
+      height: calc(48.4%);
+    }
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .map2 {
+    top: 10%;
+  }
+
+  .v313_182 {
+    left: 3%;
+    right: 0;
+    margin: 0;
+  }
+
+  .America,
+  .Africa,
+  .Asia {
+    font-size: 2.5rem;
+  }
+
+  .America {
+    left: 10%;
+  }
+
+  .Africa {
+    left: 44%;
+  }
+
+  .Asia {
+    left: 70%;
+  }
+
+  .v313_186,
+  .v313_187,
+  .v313_188 {
+    top: 34%;
+    font-size: 1.3rem;
+  }
+
+  .v313_187 {
+    left: 10.5%;
+  }
+
+  .v313_186 {
+    left: 44%;
+  }
+
+  .v313_188 {
+    left: 70%;
+  }
+
+  .v313_190 {
+    top: 20%;
+    left: 22.2%;
+    width: 60%;
+  }
+
+  .under-button {
+    bottom: 27%;
+    right: 30%;
+    transform: scale(0.07);
+  }
+
+  .coffee-belt-info {
+    top: 58%;
+    left: 16%;
+    width: 70%;
+    font-size: 1.2rem;
+    z-index: 2;
+  }
+
+  @keyframes moveTopToMiddle {
+    from {
+      height: 0;
+    }
+    to {
+      height: calc(45%);
+    }
+  }
+
+  @keyframes moveBottomToMiddle {
+    from {
+      height: 0;
+    }
+    to {
+      height: calc(46%);
+    }
+  }
+}
+
+
+  
+@media only screen and (min-device-width: 577px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .map2 {
+    width: 90%;
+    height: 70%;
+    top: 23%;
+    left: 5%;
+  }
+
+  .v313_182 {
+    left: 2%;
+    font-size: 2rem;
+    top: 12%;
+    margin: 0;
+  }
+
+  .America,
+  .Africa,
+  .Asia {
+    width: 20%;
+    top: 35%;
+    font-size: 1.8rem;
+  }
+
+  .America {
+    left: 10%;
+  }
+
+  .Africa {
+    left: 44%;
+  }
+
+  .Asia {
+    left: 70%;
+  }
+
+  .v313_186,
+  .v313_187,
+  .v313_188 {
+    top: 43%;
+    font-size: 1rem;
+  }
+
+  .v313_187 {
+    left: 10.1%;
+  }
+
+  .v313_186 {
+    left: 44%;
+  }
+
+  .v313_188 {
+    left: 70%;
+  }
+
+  .v313_190 {
+    top: 24%;
+    left: 27%;
+    width: 50%;
+    font-size: 0.9rem;
+  }
+
+  .under-button {
+    bottom: 23%;
+    right: 25%;
+    transform: scale(0.05);
+  }
+
+  .coffee-belt-info {
+    top: 77%;
+    left: 5%;
+    width: 35%;
+    font-size: 0.8rem;
+    z-index: 2;
+  }
+
+  @keyframes moveTopToMiddle {
+    from {
+      height: 0;
+    }
+    to {
+      height: calc(58%);
+    }
+  }
+
+  @keyframes moveBottomToMiddle {
+    from {
+      height: 0;
+    }
+    to {
+      height: calc(25%);
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1900px) {
+  .map2 {
+    width: 100%;
+    top: 18%;
+    left: 2%;
+  }
+
+
+.v313_182 {
+  left: 41.5%;
+ 
+  font-size: 4.6rem;
+}
+
+.v313_190 {
+
+  left:  40.4%;
+  font-size: 2.2rem;
+}
+
+
+.America,
+.Africa,
+.Asia {
+  
+
+  font-size: 5.5rem;
+ 
+}
+
+
+.v313_186,
+.v313_187,
+.v313_188 {
+ 
+  
+  font-size: 2.3rem;
+
+}
+  
+  .coffee-belt-info {
+   
+    font-size: 1.5rem;
+  
+  }
+  
+  
+@keyframes moveTopToMiddle {
+  from {
+    height: 0;
+  }
+  to {
+    height: calc(53%);
+  }
+}
+ 
+  @keyframes moveBottomToMiddle {
+    from {
+      height: 0;
+    }
+    to {
+      height: calc(31.5%);
+    }
+  }
+  
+  
+  .under-button {
+    transform: scale(0.08);
+    right: 5.8%;
+  }
+}

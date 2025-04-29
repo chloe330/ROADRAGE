@@ -1,0 +1,782 @@
+@import url("https://fonts.cdnfonts.com/css/navitism");
+@import url("https://fonts.cdnfonts.com/css/eisenhower");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gnuolane W00 Grind Bold";
+  background-color: #9fc215;
+  color: #e1e1e1;
+}
+
+.title {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 11%;
+  font-size: 3rem;
+  right: 24%;
+  opacity: 1;
+  text-align: center;
+  font-family: "Eisenhower", sans-serif;
+  font-weight: 100;
+}
+
+.love {
+  font-size: 4.5rem;
+  color: #e64610;
+  font-weight: 500;
+  letter-spacing: 0.5rem;
+  margin-left: 1%;
+}
+
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  cursor: url("../images/spray2.png"), default;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#canvas.drawing {
+  cursor: url("../images/spray2.png"), auto;
+  pointer-events: auto;
+}
+
+#toggleDrawingButton,
+#clearCanvasButton {
+  z-index: 2;
+}
+
+#toggleDrawingButton {
+  position: absolute;
+  top: 11%;
+  left: 91%;
+  padding: 0;
+  width: 6%;
+  height: 10%;
+  background-image: url("../images/spray.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  filter: drop-shadow(8px 5px 10px #3b3838);
+  transition: background-image 0.2s ease;
+  outline: none;
+  pointer-events: auto;
+}
+
+#toggleDrawingButton:hover {
+  filter: drop-shadow(8px 5px 10px #e64610);
+}
+
+#toggleDrawingButton.active {
+  filter: drop-shadow(8px 5px 10px #e64610);
+}
+
+#clearCanvasButton {
+  position: absolute;
+  top: 23%;
+  left: 91%;
+  width: 6%;
+  height: 10%;
+  background-image: url("../images/Clean.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;
+  filter: drop-shadow(8px 5px 10px #3b3838);
+  transition: background-image 0.2s ease;
+  outline: none;
+  pointer-events: auto;
+}
+
+#clearCanvasButton:hover {
+  filter: drop-shadow(8px 5px 10px #e64610);
+}
+
+.comment-actions button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+#commentForm {
+  margin-top: 3%;
+  padding: 3%;
+  width: 50%;
+  height: auto;
+  border-radius: 5%;
+  margin-bottom: 2%;
+  z-index: 1;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#commentForm h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 5%;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+}
+
+#commentForm input {
+  flex: 0.5;
+  padding: 2%;
+  border-radius: 2%;
+  width: 10%;
+  height: auto;
+  border: none;
+  color: #ffffff;
+  background-color: #3b3838;
+}
+
+#commentForm textarea {
+  flex: 1.5;
+  padding: 1%;
+  border-radius: 2%;
+  border: none;
+  background-color: #3b3838;
+  color: #ffffff;
+  margin-left: 3%;
+}
+
+#commentForm input:focus,
+#commentForm textarea:focus {
+  box-shadow: 0 0 5px #e64610;
+}
+
+#commentForm button {
+  background-color: #3b3838;
+  color: rgb(255, 255, 255);
+  padding: 2%;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin: 2%;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#commentForm button:hover {
+  background-color: #e64610;
+}
+
+#testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-heading {
+  letter-spacing: 2%;
+  margin-bottom: 5%;
+}
+
+.testimonial-heading h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  background-color: #202020;
+  color: #ffffff;
+  padding: 5% 5%;
+}
+
+.testimonial-heading h1 span {
+  font-size: 1.3rem;
+}
+
+.testimonial-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 100%;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.testimonial-box {
+  position: relative;
+  flex: 1 1 40%;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-size: cover;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-box::before {
+  content: "\2605";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5em;
+  color: #e64610;
+}
+
+.name-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.name-user strong {
+  color: #3b3838;
+  font-size: 3rem;
+  font-family: "Eisenhower", sans-serif;
+  pointer-events: none;
+  z-index: 2;
+  position: relative;
+}
+
+.client-comment p {
+  font-size: 1rem;
+  pointer-events: none;
+  z-index: 2;
+  color: #3b3838;
+  font-family: "Navitism", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  position: relative;
+}
+
+.like-button,
+.reply-button {
+  background-color: #9fc215;
+  color: #000000;
+  border: none;
+  padding: 4%;
+  align-content: center;
+  cursor: pointer;
+  border-radius: 10%;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  font-size: 0.8rem;
+}
+
+.like-button i,
+.reply-button i {
+  margin-right: 5px;
+}
+
+.like-button.liked {
+  color: #e64610;
+}
+
+.reply {
+  padding: 2%;
+  font-family: "Navitism", sans-serif;
+  font-weight: 500;
+  color: #3b3838;
+}
+
+.reply-form {
+  padding: 1.5%;
+  width: 40%;
+  height: auto;
+  border-radius: 3%;
+  margin-bottom: 1%;
+  max-width: 70%;
+  margin-left: 22%;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.reply-form input,
+.reply-form textarea {
+  padding: 0.75rem;
+  border-radius: 0.3rem;
+  border: 1px solid #ccc;
+  background-color: #3b3838;
+  color: #ccc;
+  font-size: 0.8rem;
+  font-family: Arial, sans-serif;
+  outline: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.reply-form input {
+  flex: 0.5;
+  width: 10.1rem;
+}
+
+.reply-form textarea {
+  resize: vertical;
+  min-height: 3rem;
+  flex: 2;
+}
+
+.reply-form input:focus,
+.reply-form textarea:focus {
+  box-shadow: 0 0 0.1rem rgba(0, 123, 255, 0.25);
+}
+
+.reply-form button {
+  background-color: #9fc215;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+  flex-basis: auto;
+  margin-left: 7rem;
+}
+
+.reply-form button:hover {
+  color: #e64610;
+}
+
+hr {
+  border: 1px solid #3b3838;
+  border-style: solid;
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  #canvas {
+    display: none;
+  }
+
+  #canvas.drawing {
+    display: none;
+  }
+
+  #toggleDrawingButton {
+    display: none;
+  }
+
+  .title {
+    top: 11%;
+    font-size: 2.5rem;
+    right: 1%;
+  }
+
+  .love {
+    font-size: 3rem;
+  }
+
+  .testimonial-box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 90%;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+
+  .testimonial-box {
+    position: relative;
+    flex: 1 1 30%;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background-size: cover;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #commentForm {
+    margin-top: 50%;
+    width: 74%;
+    height: auto;
+    z-index: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    margin-right: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #commentForm input {
+    margin-left: 3%;
+  }
+
+  #commentForm input,
+  #commentForm textarea {
+    width: 100%;
+    padding: 1rem;
+    resize: vertical;
+    font-size: 1rem;
+  }
+
+  #commentForm button {
+    margin-left: 80%;
+    padding: 1rem;
+    margin-top: 1rem;
+    align-self: flex-start;
+  }
+
+  .name-user strong {
+    font-size: 3.5rem;
+    z-index: unset;
+  }
+
+  .like-button,
+  .reply-button {
+    font-size: 1rem;
+  }
+
+  .client-comment p {
+    font-size: 1.5rem;
+    z-index: unset;
+  }
+
+  .reply-form {
+    max-width: 600%;
+    width: 83%;
+    margin-left: 8%;
+  }
+
+  .reply-form input,
+  .reply-form textarea {
+    padding: 1.25rem;
+    font-size: 1.1rem;
+  }
+
+  .reply-form input {
+    width: 15rem;
+    flex: none;
+  }
+
+  .reply-form textarea {
+    min-height: 10rem;
+    width: 100%;
+  }
+  .reply-form button {
+    font-size: 1.5rem;
+    margin-left: 67%;
+  }
+
+  .reply {
+    padding: 3%;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #canvas {
+    display: none;
+  }
+
+  #canvas.drawing {
+    display: none;
+  }
+
+  #toggleDrawingButton {
+    display: none;
+  }
+
+  .title {
+    top: 11%;
+    font-size: 3rem;
+    right: 20%;
+    left: 20%;
+  }
+
+  .love {
+    font-size: 3.5rem;
+  }
+
+  .testimonial-box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 90%;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+
+  .testimonial-box {
+    position: relative;
+    flex: 1 1 30%;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background-size: cover;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #commentForm {
+    margin-top: 28%;
+    width: 74%;
+    height: auto;
+    z-index: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    margin-right: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #commentForm input {
+    margin-left: 3%;
+  }
+
+  #commentForm input,
+  #commentForm textarea {
+    width: 100%;
+    padding: 1rem;
+    resize: vertical;
+    font-size: 1rem;
+  }
+
+  #commentForm button {
+    margin-left: 90%;
+    padding: 1rem;
+    margin-top: 1rem;
+    align-self: flex-start;
+  }
+
+  .name-user strong {
+    font-size: 3.8rem;
+    z-index: unset;
+  }
+
+  .like-button,
+  .reply-button {
+    font-size: 1.2rem;
+  }
+
+  .client-comment p {
+    font-size: 1.3rem;
+    z-index: unset;
+  }
+
+  .reply-form {
+    max-width: 600%;
+    width: 100%;
+    margin-left: 1%;
+  }
+
+  .reply-form input,
+  .reply-form textarea {
+    padding: 1.25rem;
+    font-size: 1.2rem;
+  }
+
+  .reply-form input {
+    width: 34.7rem;
+    flex: none;
+  }
+
+  .reply-form textarea {
+    min-height: 10rem;
+    width: 100%;
+  }
+  .reply-form button {
+    font-size: 1.7rem;
+    margin-left: 84%;
+  }
+
+  .reply {
+    padding: 3%;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-device-width: 577px) and (max-device-width: 1024px) and (orientation: landscape) {
+  #canvas {
+    display: none;
+  }
+
+  #canvas.drawing {
+    display: none;
+  }
+
+  #toggleDrawingButton {
+    display: none;
+  }
+
+  #commentForm {
+    margin-top: 15%;
+    width: 74%;
+    height: auto;
+    z-index: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .title {
+    top: 11%;
+    font-size: 4.5rem;
+    right: 30%;
+    left: 30%;
+  }
+
+  .love {
+    font-size: 7.5rem;
+  }
+
+  .comment-actions button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  #testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-heading {
+    letter-spacing: 2%;
+    margin-bottom: 5%;
+  }
+
+  .testimonial-heading h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    background-color: #202020;
+    color: #ffffff;
+    padding: 5% 5%;
+  }
+
+  .testimonial-heading h1 span {
+    font-size: 1.3rem;
+  }
+
+  .testimonial-box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 90%;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+
+  .testimonial-box {
+    position: relative;
+    flex: 1 1 30%;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background-size: cover;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .testimonial-box::before {
+    top: -55px;
+    font-size: 2.5em;
+  }
+
+  .name-user strong {
+    font-size: 5rem;
+  }
+
+  .client-comment p {
+    font-size: 2.5rem;
+  }
+
+  .like-button,
+  .reply-button {
+    font-size: 2rem;
+  }
+
+  .reply-form {
+    max-width: 600%;
+    width: 103%;
+    margin-left: 1%;
+  }
+
+  .reply-form input,
+  .reply-form textarea {
+    padding: 1.25rem;
+    font-size: 1.2rem;
+  }
+
+  .reply-form input {
+    width: 42rem;
+    flex: none;
+  }
+
+  .reply-form textarea {
+    min-height: 10rem;
+    width: 100%;
+  }
+  .reply-form button {
+    font-size: 1.7rem;
+    margin-left: 69%;
+  }
+
+  .reply {
+    padding: 3%;
+    font-size: 2.3rem;
+  }
+
+  .reply-form button {
+    font-size: 2.3rem;
+    margin-left: 34.4rem;
+  }
+}

@@ -1,0 +1,453 @@
+@import url("https://fonts.cdnfonts.com/css/navitism");
+@import url("https://fonts.cdnfonts.com/css/eisenhower");
+
+body {
+  background-color: #e3cb10;
+}
+
+.Q3 {
+  width: 57%;
+  position: absolute;
+  top: 12%;
+  left: 15%;
+  font-size: 10rem;
+  opacity: 1;
+  text-align: left;
+  font-family: "Eisenhower", sans-serif;
+  font-weight: 100;
+  color: rgb(255, 255, 255);
+  line-height: 0.84;
+}
+
+.highlight {
+  font-size: 10rem;
+  color:#3b3838;
+}
+
+.pic {
+  width: 20%;
+  height: 35%;
+  background: url("../images/v282_19.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 40%;
+  left: 27%;
+  overflow: hidden;
+}
+
+.Aroma {
+  width: 40%;
+  height: 70%;
+  position: absolute;
+  top: 19%;
+  left: 60%;
+  animation: jump 1s linear infinite;
+}
+
+.Fruity,
+.Herby,
+.Caramelly,
+.Carbony,
+.Flowery,
+.Nutty,
+.Smoky,
+.Spicy {
+ 
+  width: 38%;
+  height: 38%;
+  top: 0%;
+  position: absolute;
+  opacity: 1;
+  font-weight: 400;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.Fruity:hover,
+.Herby:hover,
+.Caramelly:hover,
+.Carbony:hover,
+.Flowery:hover,
+.Nutty:hover,
+.Smoky:hover,
+.Spicy:hover {
+  filter: drop-shadow(8px 0 5px #e64610);
+  transition: filter 0.3s ease;
+}
+
+
+
+.Spicy {
+  color: white;
+  position: absolute;
+  top: 0%;
+  left: 0.2%;
+  font-size: 1.8rem;
+  opacity: 1;
+  font-family: "Navitism", sans-serif;
+  font-weight: 400;
+  background-image: url("../images/Spicy.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.Herby {
+  position: absolute;
+  top: 28%;
+  left: 35%;
+
+  opacity: 1;
+  font-family: "Navitism", sans-serif;
+  font-weight: 400;
+  background-image: url("../images/Herby.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.Nutty {
+  position: absolute;
+  top: 27%;
+  left: 0%;
+
+  opacity: 1;
+  font-family: "Navitism", sans-serif;
+  font-weight: 400;
+  background-image: url("../images/Nutty.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.Smoky {
+  position: absolute;
+  top: 57%;
+  left: 35%;
+
+  opacity: 1;
+  font-family: "Navitism", sans-serif;
+  font-weight: 400;
+  background-image: url("../images/Smoky.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.Fruity {
+  position: absolute;
+  top: 56%;
+  left: 0%;
+  opacity: 1;
+  font-family: "Navitism", sans-serif;
+  font-weight: 400;
+  background-image: url("../images/Fruity.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.Flowery {
+  position: absolute;
+  top: 2%;
+  left: 35%;
+  opacity: 1;
+  font-family: "Navitism", sans-serif;
+  font-weight: 400;
+  background-image: url("../images/Flowery.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.Aroma a {
+  display: block;
+  text-decoration: none;
+}
+.Aroma span {
+  cursor: pointer;
+}
+.active {
+  color: #ff4000;
+}
+
+.Aroma:hover {
+  color: #a7cd12;
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .Q3 {
+    width: 57%;
+    top: 13%;
+    left: 10%;
+    font-size: 4rem;
+  }
+
+  .highlight {
+    font-size: 4rem;
+  }
+
+  .pic {
+    width: 45%;
+    height: 30%;
+    top: 9%;
+    left: 50%;
+  }
+
+  .Aroma {
+    width: 70%;
+    height: 60%;
+    top: 44%;
+    left: 17%;
+  }
+
+  .Fruity,
+  .Herby,
+  .Caramelly,
+  .Carbony,
+  .Flowery,
+  .Nutty,
+  .Smoky,
+  .Spicy {
+   
+    width: 50%;
+    height: 35%;
+  }
+
+  .Spicy {
+    top: 0%;
+    left: 0%;
+  }
+
+  .Nutty {
+    top: 22%;
+    left: 0%;
+  }
+
+  .Fruity {
+    top: 45%;
+    left: 0%;
+  }
+
+  .Caramelly {
+    top: 64.52%;
+    left: 0%;
+  }
+
+  .Herby {
+    top: 22%;
+    left: 45%;
+  }
+
+  .Smoky {
+    top: 45%;
+    left: 45%;
+  }
+
+  .Carbony {
+    top: 64.52%;
+    left: 60%;
+  }
+
+  .Flowery {
+    top: 1%;
+    left: 45%;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .Q3 {
+    width: 57%;
+    top: 13%;
+    left: 23%;
+    font-size: 5rem;
+  }
+
+  .highlight {
+    font-size: 5.3rem;
+  }
+
+  .pic {
+    width: 45%;
+    height: 30%;
+    top: 12%;
+    left: 46%;
+  }
+
+  .Aroma {
+    width: 60%;
+    height: 50%;
+    top: 48%;
+    left: 22%;
+  }
+
+  .Fruity,
+  .Herby,
+  .Caramelly,
+  .Carbony,
+  .Flowery,
+  .Nutty,
+  .Smoky,
+  .Spicy {
+   
+    width: 50%;
+    height: 35%;
+  }
+
+  .Spicy {
+    top: 0%;
+    left: 0%;
+  }
+
+  .Nutty {
+    top: 30%;
+    left: 0%;
+  }
+
+  .Fruity {
+    top: 61%;
+    left: 0%;
+  }
+
+  .Caramelly {
+    top: 64.52%;
+    left: 0%;
+  }
+
+  .Herby {
+    top: 30%;
+    left: 45%;
+  }
+
+  .Smoky {
+    top: 61%;
+    left: 45%;
+  }
+
+  .Carbony {
+    top: 64.52%;
+    left: 60%;
+  }
+
+  .Flowery {
+    top: 1%;
+    left: 45%;
+  }
+}
+
+@media only screen and (min-device-width: 577px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .Q3 {
+    width: 57%;
+    top: 15%;
+    left: 18%;
+    font-size: 5rem;
+  }
+  .highlight {
+    font-size: 5rem;
+  }
+
+  .pic {
+    width: 10%;
+    height: 30%;
+    top: 45%;
+    left: 30%;
+  }
+
+  .Aroma {
+    width: 45%;
+    height: 60%;
+    top: 15%;
+    left: 55%;
+  }
+
+  .Fruity,
+  .Herby,
+  .Caramelly,
+  .Carbony,
+  .Flowery,
+  .Nutty,
+  .Smoky,
+  .Spicy {
+   
+    width: 40%;
+    height: 45%;
+  }
+
+  .Spicy {
+    top: 0%;
+    left: 0%;
+  }
+
+  .Nutty {
+    top: 40%;
+    left: 0%;
+  }
+
+  .Fruity {
+    top: 85%;
+    left: 0%;
+  }
+
+  .Caramelly {
+    top: 64.52%;
+    left: 0%;
+  }
+
+  .Herby {
+    top: 40%;
+    left: 45%;
+  }
+
+  .Smoky {
+    top: 85%;
+    left: 45%;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .Q3 {
+    top: 15%;
+    font-size: 20rem;
+  }
+  .highlight {
+    font-size: 20rem;
+  }
+
+
+  
+}

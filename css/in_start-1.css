@@ -1,0 +1,388 @@
+@import url("https://fonts.cdnfonts.com/css/navitism");
+@import url("https://fonts.cdnfonts.com/css/eisenhower");
+
+body {
+  position: relative;
+  margin: 0;
+  height: 100%;
+  background-color: #e64610;
+}
+
+.circle-container {
+  display: flex;
+}
+
+.circle-text-container {
+  position: absolute;
+  top: 29%;
+  left: 30%;
+  transform: translateX(20%);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.circle-text1 {
+  font-size: 11rem;
+  letter-spacing: 0.01rem;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation: fadeIn 1s forwards 1s;
+  font-family: "Eisenhower", sans-serif;
+  margin-bottom: -4%;
+}
+
+.circle-text2 {
+  font-size: 2.2rem;
+  position: relative;
+  left: 2%;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation: fadeIn 1s forwards 1.5s;
+  font-family: "Navitism", sans-serif;
+  margin-bottom: -4%;
+  font-weight: 400;
+}
+
+.circle-text3 {
+  font-size: 2.2rem;
+  bottom: 15%;
+  letter-spacing: 0.01rem;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation: fadeIn 1s forwards 2s;
+  font-family: "Navitism", sans-serif;
+  font-weight: 400;
+}
+
+.circle-text4 {
+  top: 70%;
+  font-size: 2.2rem;
+  letter-spacing: 0.01rem;
+  bottom: 20%;
+  font-family: "Navitism", sans-serif;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation: fadeIn 1s forwards 2.5s;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.circle-text5 {
+  font-size: 5.5rem;
+  bottom: 10rem;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation: fadeIn 1s forwards 3s;
+  font-family: "Eisenhower", sans-serif;
+  text-shadow: 50% #000000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ready-text {
+  transform: scale(0.05);
+  width: 1%;
+  height: 1%;
+  bottom: 40%;
+  right: 8%;
+  position: absolute;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation: fadeIn 1s forwards 3.4s;
+}
+
+.ready-text :hover {
+  filter: drop-shadow(80px 10px 10px #e3cb10);
+  transition: filter 0.3s ease;
+}
+
+.circle-image {
+  display: inline-block;
+  width: 25vw;
+  height: 25vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.circle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circle2 {
+  width: 15vw;
+  height: 15vw;
+  top: 50%;
+  left: 6%;
+  animation: circle2-clash 1s forwards;
+}
+
+.circle3 {
+  top: 35%;
+  left: -2%;
+  animation: circle3-clash 0.5s forwards;
+}
+
+.circle4 {
+  width: 21vw;
+  height: 21vw;
+  top: 95%;
+  right: 33%;
+  animation: circle4-clash 0.5s forwards;
+}
+
+
+.circle-container {
+  position: relative;
+}
+
+
+@keyframes circle2-clash {
+  0% {
+    left: -100%;
+  }
+  20% {
+    left: 6%;
+  }
+}
+
+
+@keyframes circle3-clash {
+  0% {
+    left: 100%;
+  }
+  30% {
+    left: -8%;
+  }
+}
+
+
+@keyframes circle4-clash {
+  0% {
+    top: 100%;
+  }
+  40% {
+    top: 69%;
+  }
+}
+
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .circle-text-container {
+    top: 45%;
+    left: 13%;
+    transform: none;
+  }
+
+  .circle-text1 {
+    font-size: 8rem;
+  }
+
+  .circle-text2 {
+    font-size: 1.7rem;
+  }
+
+  .circle-text3 {
+    font-size: 1.7rem;
+  }
+
+  .circle-text4 {
+    font-size: 1.7rem;
+  }
+
+  .circle-text5 {
+    font-size: 4.6rem;
+  }
+
+  .ready-text {
+    transform: scale(0.05);
+    bottom: 35%;
+    left: 58%;
+  }
+
+  .circle-image {
+    width: 150vw;
+    height: 150vw;
+  }
+
+  .circle2 {
+    width: 120vw;
+    height: 40vw;
+    top: 23%;
+    left: 15%;
+  }
+
+  .circle3 {
+    width: 250vw;
+    height: 60vw;
+    top: 2%;
+    left: 25%;
+  }
+
+  .circle4 {
+    width: 170vw;
+    height: 40vw;
+    top: 75%;
+    right: 40%;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .circle-text-container {
+    top: 42%;
+    left: 13%;
+    transform: none;
+  }
+
+  .ready-text {
+    transform: scale(0.07);
+    bottom: 16%;
+    right: 26%;
+  }
+
+  .circle-image {
+    width: 150vw;
+    height: 150vw;
+  }
+
+  .circle2 {
+    width: 110vw;
+    height: 30vw;
+    top: 20%;
+    left: 17%;
+  }
+
+  .circle3 {
+    width: 240vw;
+    height: 50vw;
+    top: -5%;
+    left: 25%;
+  }
+
+  .circle4 {
+    width: 160vw;
+    height: 30vw;
+    top: 60%;
+    right: 40%;
+  }
+}
+
+@media only screen and (min-device-width: 577px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .circle-text-container {
+    top: 19%;
+    left: 30%;
+    transform: translateX(20%);
+  }
+  .circle-text1 {
+    font-size: 8rem;
+  }
+
+  .circle-text2 {
+    font-size: 1.5rem;
+  }
+
+  .circle-text3 {
+    font-size: 1.5rem;
+  }
+
+  .circle-text4 {
+    font-size: 1.5rem;
+  }
+
+  .circle-text5 {
+    font-size: 4.1rem;
+  }
+
+  .ready-text {
+    transform: scale(0.05);
+    bottom: 40%;
+    right: 16%;
+  }
+
+  .circle-image {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .circle2 {
+    width: 15vw;
+    height: 15vw;
+    top: 30%;
+    left: 6%;
+  }
+
+  .circle3 {
+    top: 15%;
+    left: -1%;
+  }
+
+  .circle4 {
+    width: 21vw;
+    height: 21vw;
+    top: 75%;
+    right: 33%;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .circle-text-container {
+    top: 32%;
+    left: 40%;
+    transform: none;
+  }
+
+  .ready-text {
+    transform: scale(0.08);
+    right: 5.8%;
+    bottom: 38%;
+  }
+
+  .circle-text1 {
+    font-size: 18rem;
+  }
+
+  .circle-text2 {
+    font-size: 5.4rem;
+  }
+
+  .circle-text3 {
+    font-size: 6rem;
+  }
+
+  .circle-text4 {
+    font-size: 6rem;
+  }
+
+  .circle-text5 {
+    font-size: 10rem;
+  }
+}

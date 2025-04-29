@@ -1,0 +1,343 @@
+@import url("https://fonts.cdnfonts.com/css/navitism");
+@import url("https://fonts.cdnfonts.com/css/eisenhower");
+
+body {
+  background-color: #f4c406;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 5% auto 0;
+  max-width: 80%;
+}
+
+.card {
+  position: relative;
+  width: 25%;
+  height: 40%;
+  border-radius: 0px 2.5%;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  perspective: 100em;
+  background-color: #ff4000;
+  color: rgb(255, 255, 255);
+  margin: 2%;
+  box-shadow: 30px 40px 40px rgba(0, 0, 0, 0.2);
+  top: 9%;
+}
+
+.cover {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: transform 1s;
+  border-radius: 2.5% 0% 0% 2.5%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card:hover .cover {
+  transform: rotateY(-120deg);
+}
+
+.coverFront,
+.coverBack {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.coverFront {
+  text-align: center;
+  background-color: #000000;
+  opacity: 1;
+  box-shadow: 10px 0 10px -5px rgba(0, 0, 0, 0.5);
+}
+.coverBack {
+  border-radius: 2.5% 0% 0% 2.5%;
+  transform: rotateY(180deg);
+  color: #000000;
+}
+
+.sh_img {
+  width: 80%;
+  height: 90%;
+  max-height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.shop-title {
+  width: 100%;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 11%;
+  font-size: 3rem;
+  opacity: 1;
+  text-align: center;
+  font-family: "Eisenhower", sans-serif;
+  font-weight: 100;
+}
+
+.spec_title {
+  font-size: 4.5rem;
+  color: #e64610;
+  font-weight: 500;
+  letter-spacing: 0.5rem;
+  margin-left: 1%;
+}
+
+h1 {
+  top: 0;
+  font-size: 1.6rem;
+  margin-bottom: 2%;
+  font-family: "Navitism", sans-serif;
+}
+
+.google-map {
+  padding-bottom: 50%;
+  position: relative;
+}
+
+.google-map iframe {
+  height: 8rem;
+  width: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  position: absolute;
+}
+
+.info {
+  padding-top: 25%;
+  font-size: 1rem;
+}
+
+.info3 {
+  padding-top: 80%;
+  font-size: 1rem;
+}
+
+.info4 {
+  padding-top: 25%;
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    height: auto;
+    margin: 10px 0;
+    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 8%;
+  }
+
+  .spec_title {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .google-map {
+    padding-bottom: 50%;
+    position: relative;
+  }
+
+  .google-map iframe {
+    height: 7rem;
+    width: 10rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 5%;
+  }
+
+  .shop-title {
+    font-size: 2rem;
+    padding: 4%;
+  }
+
+  .info {
+    padding-top: 3rem;
+  }
+
+  .info3 {
+    padding-top: 5rem;
+  }
+
+  .info4 {
+    padding-top: 3rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .card-container {
+    max-height: 65%;
+  }
+
+  .card {
+    width: 40%;
+    height: 40%;
+    top: 14%;
+    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .google-map {
+    padding-bottom: 50%;
+    position: relative;
+  }
+
+  .google-map iframe {
+    height: 6rem;
+    width: 10rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+    margin-bottom: 5%;
+  }
+
+  .shop-title {
+    font-size: 3rem;
+  }
+
+  .info {
+    font-size: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  .info3 {
+    font-size: 1rem;
+    padding-top: 4rem;
+  }
+
+  .info4 {
+    font-size: 0.8rem;
+    padding-top: 2rem;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .card {
+    width: 40%;
+    height: auto;
+    margin: 10px 0;
+    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .google-map {
+    padding-bottom: 50%;
+    position: relative;
+  }
+
+  .google-map iframe {
+    height: 8rem;
+    width: 14rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 5%;
+  }
+
+  .shop-title {
+    font-size: 3rem;
+  }
+
+  .info {
+    font-size: 1.2rem;
+    padding-top: 3rem;
+  }
+
+  .info3 {
+    font-size: 1.2rem;
+    padding-top: 5rem;
+  }
+
+  .info4 {
+    font-size: 1.2rem;
+    padding-top: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .card {
+    width: 28%;
+    height: 49%;
+  }
+
+  .cover {
+    width: 90%;
+    height: 100%;
+  }
+
+  .coverFront,
+  .coverBack {
+    width: 100%;
+    height: 100%;
+  }
+
+  .shop-title {
+    font-size: 4.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  .google-map iframe {
+    height: 20rem;
+    width: 22rem;
+  }
+
+  .info {
+    padding-top: 55%;
+    font-size: 2rem;
+  }
+
+  .info3 {
+    padding-top: 95%;
+    font-size: 2.5rem;
+  }
+
+  .info4 {
+    padding-top: 55%;
+    font-size: 2.5rem;
+  }
+}

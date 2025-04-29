@@ -1,0 +1,499 @@
+@import url("https://fonts.cdnfonts.com/css/navitism");
+@import url("https://fonts.cdnfonts.com/css/eisenhower");
+
+body {
+  position: relative;
+  margin: 0;
+  height: 100vh;
+  background-color: #e64610;
+}
+
+.circle-image {
+  display: inline-block;
+  width: 25vw;
+  height: 25vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.circle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circle2 {
+  width: 15vw;
+  height: 15vw;
+  top: -40%;
+  left: 5%;
+  animation: moveCircle2 1s forwards;
+}
+
+.circle3 {
+  top: 40%;
+  left: -5%;
+  z-index: 1;
+  animation: moveCircle3 1s forwards;
+}
+
+.circle4 {
+  width: 21vw;
+  height: 21vw;
+  top: 98%;
+  right: 38%;
+  animation: moveCircle4 1s forwards;
+}
+
+@keyframes moveCircle2 {
+  0% {
+    top: 50%;
+    left: 6%;
+  }
+  30% {
+    top: -40%;
+    left: 5%;
+  }
+}
+
+@keyframes moveCircle3 {
+  0% {
+    top: 35%;
+    left: -2%;
+  }
+  30% {
+    top: 40%;
+    left: -5%;
+  }
+}
+
+@keyframes moveCircle4 {
+  0% {
+    top: 95%;
+    right: 33%;
+  }
+  30% {
+    top: 98%;
+    right: 38%;
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.text-section {
+  position: absolute;
+  max-width: 39.58%;
+  padding: 1.85%;
+  animation: slideIn 0.5s ease-out forwards;
+  font-weight: 100;
+}
+
+.text-section-1 {
+  right: 43%;
+  top: 13%;
+  max-width: 25%;
+}
+
+.text-section-2 {
+  right: 22%;
+  top: 52%;
+  max-width: 25%;
+}
+
+span {
+  font-family: "Navitism", sans-serif;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.text-section h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3%;
+  font-family: "Eisenhower", sans-serif;
+  color: #ffffff;
+}
+
+.text-section-1 h3 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.text-section-2 h3 {
+  color: #3b3838;
+}
+
+.text-section p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  font-family: "Navitism", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.text-section-2 p {
+  color: rgb(0, 0, 0);
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.got-text {
+  transform: scale(0.05);
+  width: 1vw;
+  height: 1vh;
+  position: absolute;
+  right: 15.3%;
+  top: 39.8%;
+  opacity: 0;
+  animation: fadeIn 1s forwards 3s;
+}
+
+.got-text :hover {
+  filter: drop-shadow(80px 10px 10px #e3cb10);
+  transition: filter 0.3s ease;
+}
+
+.line1 {
+  position: absolute;
+  left: -100%;
+  top: 48%;
+  width: 100%;
+  background: #3b3838;
+  height: 0.2rem;
+  animation: animate-line1 3s 0.4s forwards;
+  z-index: 0;
+}
+
+@keyframes animate-line1 {
+  from {
+    left: -100%;
+    width: 0;
+  }
+  to {
+    left: 0;
+    width: calc(100% - 16%);
+  }
+}
+
+.line2 {
+  position: absolute;
+  right: -100%;
+  top: 48%;
+  width: 13%;
+  background: #3b3838;
+  height: 0.2rem;
+  animation: animate-line2 3s 0.6s forwards;
+}
+
+@keyframes animate-line2 {
+  from {
+    right: -100%;
+    width: 0;
+  }
+  to {
+    right: 0;
+    width: calc(13% - 5%);
+  }
+}
+
+
+
+@media only screen and (max-width: 767px){
+  .circle2 {
+    width: 35vw;
+    height: 35vw;
+    top: 18%;
+    left: -2%;
+    animation: none;
+  }
+
+  .circle3 {
+    width: 35vw;
+    height: 35vw;
+    top: 108%;
+    left: -37%;
+    animation: none;
+  }
+
+  .circle4 {
+    width: 31vw;
+    height: 31vw;
+    top: 141%;
+    right: -1%;
+    animation: none;
+  }
+
+  .got-text {
+    top: 42%;
+    transform: scale(0.05);
+    right: 36%;
+  }
+
+  .line1 {
+    top: 49%;
+    left: -1.56%;
+    width: calc(60% + 4.06%);
+  }
+
+  @keyframes animate-line1 {
+    from {
+      left: -100%;
+      width: 0;
+    }
+    to {
+      left: 0;
+      width: calc(100% - 40%);
+    }
+  }
+
+  .line2 {
+    top: 49%;
+    right: 0;
+    width: calc(13% - 1.25%);
+  }
+
+  .text-section-1 {
+    left: 30%;
+    top: 15%;
+    min-width: 60%;
+  }
+
+  .text-section-2 {
+    left: 30%;
+    top: 51.9%;
+    min-width: 60%;
+  }
+
+  span {
+    font-size: 2.7rem;
+  }
+
+  .text-section-1 h3 {
+    font-size: 2.5rem;
+  }
+
+  .text-section-2 h3 {
+    font-size: 2.5rem;
+  }
+
+  .text-section p {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .circle2 {
+    width: 25vw;
+    height: 25vw;
+    top: -5%;
+    left: 3%;
+    animation: none;
+  }
+
+  .circle3 {
+    width: 35vw;
+    height: 35vw;
+    top: 108%;
+    left: -28%;
+    animation: none;
+  }
+
+  .circle4 {
+    width: 31vw;
+    height: 31vw;
+    top: 200%;
+    right: 63%;
+    animation: none;
+  }
+
+  .got-text {
+    top: 41%;
+    right: 27%;
+  }
+
+  .line1 {
+    top: 49%;
+    left: -1.56%;
+    width: calc(60% + 4.06%);
+  }
+
+  @keyframes animate-line1 {
+    from {
+      left: -100%;
+      width: 0;
+    }
+    to {
+      left: 0;
+      width: calc(100% - 27%);
+    }
+  }
+
+  .line2 {
+    top: 49%;
+    right: 0;
+    width: calc(13% - 1.25%);
+  }
+
+  .text-section-1 {
+    left: 30%;
+    top: 15%;
+    min-width: 60%;
+  }
+
+  .text-section-2 {
+    left: 30%;
+    top: 62%;
+    min-width: 60%;
+  }
+
+  span {
+    font-size: 2.7rem;
+  }
+
+  .text-section-1 h3 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-device-width: 577px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .circle2 {
+    width: 15vw;
+    height: 15vw;
+    top: 2%;
+    left: 1%;
+    animation: none;
+  }
+
+  .circle3 {
+    width: 20vw;
+    height: 20vw;
+    top: 24%;
+    left: 24%;
+    animation: none;
+  }
+
+  .circle4 {
+    width: 15vw;
+    height: 15vw;
+    top: -3%;
+    right: -46%;
+    animation: none;
+  }
+
+  .got-text {
+    top: 70%;
+    transform: scale(0.06);
+    right: 17%;
+    opacity: 100;
+    animation: none;
+  }
+
+  .line1 {
+    display: none;
+  }
+
+  .line2 {
+    display: none;
+  }
+
+  .text-section {
+    animation: none;
+    top: 20%;
+  }
+
+  .text-section-1 {
+    left: 15%;
+    min-width: 15rem;
+  }
+
+  .text-section-2 {
+    left: 59%;
+    min-width: 15rem;
+  }
+
+  span {
+    font-size: 2.7rem;
+  }
+
+  .text-section-1 h3 {
+    font-size: 2.5rem;
+  }
+
+  .text-section-2 h3 {
+    font-size: 2.5rem;
+  }
+  .text-section p {
+    font-size: 0.8rem;
+  }
+}
+
+
+@media only screen and (min-width: 1900px) {
+  span {
+    font-size: 6rem;
+  }
+
+  .text-section h3 {
+    font-size: 6rem;
+  }
+
+  .text-section-1 h3 {
+    font-size: 4rem;
+  }
+
+  .text-section p {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .got-text {
+    transform: scale(0.08);
+    right: 12.9%;
+    top: 42%;
+  }
+
+
+@keyframes animate-line1 {
+  from {
+    left: -100%;
+    width: 0;
+  }
+  to {
+    left: 0;
+    width: calc(100% - 14%);
+  }
+}
+
+
+@keyframes animate-line2 {
+  from {
+    right: -100%;
+    width: 0;
+  }
+  to {
+    right: 0;
+    width: calc(13% - 4.5%);
+  }
+}
+
+}

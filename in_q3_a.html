@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ROADRAGE</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="css/in_q3_a.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="images/Logo.png" alt="Icon" class="header-icon" />
+      <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar2"></div>
+        </div>
+        <div class="nav-wrapper" id="navWrapper">
+          <ul class="nav-menu" id="myLinks">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="in_start-1.html">COFFEE101</a></li>
+            <li><a href="localshop.html">HKROAST</a></li>
+            <li><a href="discussion.html">BREWROOM</a></li>
+            <li><a href="aboutus.html">ABOUTUS</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div id="overlay" class="overlay"></div>
+
+
+    <div class="circle-container">
+      <h1>Let's talk about the <span class="highlight"><br>Coffee Flavours</span></h1>
+      <h2>Click the coffee cups</h2>
+    
+      <button class="cup-button" data-flavor="spicy" onclick="selectFlavor('spicy')">
+        <img src="images/Spicy1.png" alt="Spicy Coffee Cup" />
+      </button>
+    
+      <button class="cup-button" data-flavor="herby" onclick="selectFlavor('herby')">
+        <img src="images/Herby1.png" alt="Herby Coffee Cup" />
+      </button>
+    
+      <button class="cup-button" data-flavor="nutty" onclick="selectFlavor('nutty')">
+        <img src="images/Nutty1.png" alt="Nutty Coffee Cup" />
+      </button>
+    
+      <button class="cup-button" data-flavor="smoky" onclick="selectFlavor('smoky')">
+        <img src="images/Smoky1.png" alt="Smoky Coffee Cup" />
+      </button>
+    
+      <button class="cup-button" data-flavor="fruity" onclick="selectFlavor('fruity')">
+        <img src="images/Fruity1.png" alt="Fruity Coffee Cup" />
+      </button>
+    
+      <button class="cup-button" data-flavor="flowery" onclick="selectFlavor('flowery')">
+        <img src="images/Flowery1.png" alt="Flowery Coffee Cup" />
+      </button>
+    </div>
+    
+
+    <a href="in_q4.html" class="button">
+      <img src="images/Next_4.png" alt="Next" />
+    </a>
+
+    <footer class="footer">
+      <p>&copy; 2024 Coffee Website. All rights reserved.</p>
+    </footer>
+  </div>
+
+
+
+  <script src="./js/text.js"></script>
+
+  <script src="./js/menu.js"></script>
+</body>
+</html>

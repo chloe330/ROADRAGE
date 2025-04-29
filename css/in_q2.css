@@ -1,0 +1,417 @@
+@import url("https://fonts.cdnfonts.com/css/navitism");
+@import url("https://fonts.cdnfonts.com/css/eisenhower");
+:root {
+  --active-color: #ff4000;
+  --default-color: #ffffff;
+}
+
+body {
+  background-color: #a7cd12;
+}
+
+.container {
+  position: relative;
+}
+
+.Q2 {
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  font-weight: normal;
+  font-size: 2.5rem;
+  font-family: "Eisenhower", sans-serif;
+  font-weight: 100;
+  color: rgb(255, 255, 255);
+}
+
+.highlight {
+  color: #3b3838;
+  font-size: 3.5rem;
+  font-family: "Eisenhower", sans-serif;
+}
+
+.flavor {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  font-family: "Navitism", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  animation: jump 1s linear infinite;
+}
+
+.bitter {
+  top: 63%;
+  left: 9%;
+  font-size: 4.2rem;
+  text-shadow: 4px 4px #3d3d3d;
+}
+
+.sour {
+  top: 46%;
+  left: 28%;
+  font-weight: 100;
+}
+
+.salty {
+  top: 83.8%;
+  right: 61%;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.sweet {
+  top: 26%;
+  left: 37%;
+  font-size: 4.2rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.nutty {
+  top: 36%;
+  right: 31%;
+  font-size: 2.5rem;
+  text-shadow: 4px 4px #494949;
+}
+
+.umami {
+  top: 61%;
+  right: 25.5%;
+  font-style: italic;
+  font-weight: 100;
+}
+
+.nutty:hover,
+.salty:hover,
+.umami:hover {
+  font-weight: bold;
+  color: #e3cb10;
+}
+
+.sour:hover,
+.sweet:hover,
+.bitter:hover {
+  font-weight: bold;
+  color: #ff4000;
+}
+
+
+.line {
+  position: absolute;
+  height: 0.1rem;
+  background-color: rgb(255, 255, 255);
+  width: 0;
+  animation: animate-line 3s forwards;
+}
+
+
+@keyframes animate-line {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--line-width);
+  }
+}
+
+
+.line_bitter {
+  top: 71.2%;
+  left: 0%;
+  --line-width: 12%;
+}
+
+.line_sour {
+  top: 50%;
+  left: 0%;
+  --line-width: 29.2%;
+}
+
+.line_salty {
+  top: 88%;
+  right: 0%;
+  --line-width: 63%;
+}
+
+.line_sweet {
+  top: 34%;
+  left: 0%;
+  --line-width: 40.5%;
+}
+
+.line_nutty {
+  top: 42%;
+  right: 0%;
+  --line-width: 32.8%;
+}
+
+.line_umami {
+  top: 65%;
+  right: 0%;
+  --line-width: 27.9%;
+}
+
+
+.line-active {
+  background-color: var(--active-color);
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .Q2 {
+    position: absolute;
+    top: 13%;
+    left: 3%;
+    font-size: 2rem;
+  }
+
+  .flavor {
+    font-size: 1.4rem;
+  }
+
+  .highlight {
+    font-size: 2.5rem;
+  }
+
+  .bitter {
+    top: 65%;
+    left: 14%;
+    font-size: 2.5rem;
+  }
+  .sour {
+    top: 47%;
+    left: 25%;
+  }
+  .salty {
+    top: 85%;
+    right: 58%;
+    font-size: 1.2rem;
+  }
+  .sweet {
+    top: 26%;
+    left: 31%;
+    font-size: 2.5rem;
+  }
+  .nutty {
+    top: 40%;
+    right: 28.9%;
+    font-size: 1.5rem;
+  }
+  .umami {
+    top: 69%;
+    right: 21.5%;
+  }
+
+ 
+  .line_bitter {
+    top: 71%;
+    left: 0%;
+    --line-width: 20%;
+  }
+
+  .line_sour {
+    top: 50%;
+    left: 0%;
+    --line-width: 29.2%;
+  }
+
+  .line_salty {
+    top: 88%;
+    right: 0%;
+    --line-width: 63%;
+  }
+
+  .line_sweet {
+    top: 31.5%;
+    left: 0%;
+    --line-width: 40.5%;
+  }
+
+  .line_nutty {
+    top: 44%;
+    right: 0%;
+    --line-width: 32.8%;
+  }
+
+  .line_umami {
+    top: 72%;
+    right: 0%;
+    --line-width: 27.9%;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .Q2 {
+    position: absolute;
+    top: 13%;
+    left: 3%;
+    font-size: 2.3rem;
+  }
+
+  .highlight {
+    font-size: 3.5rem;
+  }
+  .flavor {
+    font-size: 2rem;
+  }
+
+  .bitter {
+    top: 64%;
+    left: 8%;
+    font-size: 4rem;
+  }
+  .sour {
+    top: 46%;
+    left: 26%;
+  }
+  .salty {
+    top: 84%;
+    right: 59.5%;
+    font-size: 2.2;
+  }
+  .sweet {
+    top: 27%;
+    left: 36%;
+    font-size: 4rem;
+  }
+  .nutty {
+    top: 37%;
+    right: 28.9%;
+    font-size: 2rem;
+  }
+  .umami {
+    top: 61%;
+    right: 22.5%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .Q2 {
+    position: absolute;
+    top: 18%;
+    left: 3%;
+    font-size: 2rem;
+  }
+
+  .highlight {
+    font-size: 2.5rem;
+  }
+
+  .flavor {
+    font-size: 1.5rem;
+  }
+  .bitter {
+    top: 67%;
+    left: 10%;
+    font-size: 3rem;
+  }
+  .sour {
+    top: 54%;
+    left: 28%;
+  }
+  .salty {
+    top: 83%;
+    right: 61.5%;
+    font-size: 2rem;
+  }
+  .sweet {
+    top: 30%;
+    left: 38%;
+    font-size: 3rem;
+  }
+  .nutty {
+    top: 39.8%;
+    right: 31%;
+    font-size: 2rem;
+  }
+  .umami {
+    top: 68%;
+    right: 25.5%;
+  }
+
+ 
+  .line_bitter {
+    top: 80%;
+    left: 0%;
+    --line-width: 12%;
+  }
+
+  .line_sour {
+    top: 61%;
+    left: 0%;
+    --line-width: 29.2%;
+  }
+
+  .line_salty {
+    top: 92%;
+    right: 0%;
+    --line-width: 64%;
+  }
+
+  .line_sweet {
+    top: 42%;
+    left: 0%;
+    --line-width: 40.5%;
+  }
+
+  .line_nutty {
+    top: 50%;
+    right: 0%;
+    --line-width: 32.8%;
+  }
+
+  .line_umami {
+    top: 74%;
+    right: 0%;
+    --line-width: 27.9%;
+  }
+
+ 
+  .line-active {
+    background-color: var(
+      --active-color
+    );
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .Q2 {
+    font-size: 4.5rem;
+  }
+
+  .highlight {
+    font-size: 5.5rem;
+  }
+
+  .flavor {
+    font-size: 4rem;
+  }
+
+  .bitter {
+    font-size: 8.2rem;
+  }
+
+  .salty {
+    font-size: 3.5rem;
+  }
+
+  .sweet {
+    font-size: 8.2rem;
+  }
+
+  .nutty {
+    font-size: 4.5rem;
+  }
+}
